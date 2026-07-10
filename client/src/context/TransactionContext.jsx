@@ -38,6 +38,7 @@ function TransactionProvider({ children }) {
     },
   ]);
 
+  // Add Transaction
   const addTransaction = (transaction) => {
     setTransactions((prev) => [
       {
@@ -49,6 +50,14 @@ function TransactionProvider({ children }) {
     ]);
   };
 
+  // Delete Transaction
+  const deleteTransaction = (id) => {
+    setTransactions((prev) =>
+      prev.filter((transaction) => transaction.id !== id)
+    );
+  };
+
+  // Totals
   const totalIncome = transactions
     .filter((t) => t.type === "Income")
     .reduce((sum, t) => sum + t.amount, 0);
@@ -66,6 +75,7 @@ function TransactionProvider({ children }) {
       value={{
         transactions,
         addTransaction,
+        deleteTransaction,
         totalIncome,
         totalExpense,
         totalBalance,

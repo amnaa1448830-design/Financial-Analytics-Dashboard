@@ -2,17 +2,21 @@ import { FaTrash } from "react-icons/fa";
 import useTransactions from "../../hooks/useTransactions";
 import "../../styles/transactions.css";
 
-function RecentTransactions() {
+function RecentTransactions({ searchTerm }) {
   const { transactions, deleteTransaction } = useTransactions();
+
+  const filteredTransactions = transactions.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="transactions-box">
       <h3>Recent Transactions</h3>
 
-      {transactions.length === 0 ? (
+      {filteredTransactions.length === 0 ? (
         <p>No transactions found.</p>
       ) : (
-        transactions.map((item) => (
+        filteredTransactions.map((item) => (
           <div className="transaction-item" key={item.id}>
             <div>
               <h4>{item.title}</h4>

@@ -17,11 +17,13 @@ import RecentTransactions from "../components/dashboard/RecentTransactions";
 import AIInsight from "../components/dashboard/AIInsight";
 import AddTransactionButton from "../components/dashboard/AddTransactionButton";
 import AddTransactionModal from "../components/dashboard/AddTransactionModal";
+import SearchBar from "../components/dashboard/SearchBar";
 
 import "../styles/dashboard.css";
 
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const {
     totalBalance,
@@ -96,8 +98,16 @@ function Dashboard() {
           <ExpenseChart />
         </div>
 
+        {/* Search */}
+        <SearchBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
+
         {/* Recent Transactions */}
-        <RecentTransactions />
+        <RecentTransactions
+          searchTerm={searchTerm}
+        />
 
         {/* AI Insight */}
         <AIInsight />

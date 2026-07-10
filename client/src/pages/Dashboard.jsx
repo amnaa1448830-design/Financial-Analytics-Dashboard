@@ -18,12 +18,14 @@ import AIInsight from "../components/dashboard/AIInsight";
 import AddTransactionButton from "../components/dashboard/AddTransactionButton";
 import AddTransactionModal from "../components/dashboard/AddTransactionModal";
 import SearchBar from "../components/dashboard/SearchBar";
+import TransactionFilter from "../components/dashboard/TransactionFilter";
 
 import "../styles/dashboard.css";
 
 function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [filterType, setFilterType] = useState("All");
 
   const {
     totalBalance,
@@ -104,9 +106,16 @@ function Dashboard() {
           setSearchTerm={setSearchTerm}
         />
 
+        {/* Filter */}
+        <TransactionFilter
+          filterType={filterType}
+          setFilterType={setFilterType}
+        />
+
         {/* Recent Transactions */}
         <RecentTransactions
           searchTerm={searchTerm}
+          filterType={filterType}
         />
 
         {/* AI Insight */}

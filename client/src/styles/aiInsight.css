@@ -1,0 +1,46 @@
+.ai-card {
+  margin-top: 30px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.ai-header h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.ai-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insight {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.positive {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.recommendation {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.saving {
+  background: #ede9fe;
+  color: #6d28d9;
+  font-weight: bold;
+}

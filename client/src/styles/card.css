@@ -1,0 +1,68 @@
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card h3 {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.card p {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.card-change {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #16a34a;
+}

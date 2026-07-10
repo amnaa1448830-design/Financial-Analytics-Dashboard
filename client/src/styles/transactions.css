@@ -1,0 +1,39 @@
+.transactions-box {
+  margin-top: 30px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item h4 {
+  margin: 0;
+}
+
+.transaction-item p {
+  margin-top: 5px;
+  color: gray;
+  font-size: 14px;
+}
+
+.income {
+  color: green;
+  font-weight: bold;
+}
+
+.expense {
+  color: red;
+  font-weight: bold;
+}

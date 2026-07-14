@@ -45,7 +45,12 @@ function Sidebar() {
           </li>
 
           <li>
-            <NavLink to="#">
+            <NavLink
+              to="/budget"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               💰 Budget
             </NavLink>
           </li>

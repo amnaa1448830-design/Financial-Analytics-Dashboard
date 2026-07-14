@@ -8,6 +8,7 @@ function AddTransactionModal({ isOpen, onClose }) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("Income");
+  const [category, setCategory] = useState("Food");
   const [date, setDate] = useState("");
 
   if (!isOpen) return null;
@@ -22,12 +23,14 @@ function AddTransactionModal({ isOpen, onClose }) {
       title,
       amount: Number(amount),
       type,
+      category,
       date,
     });
 
     setTitle("");
     setAmount("");
     setType("Income");
+    setCategory("Food");
     setDate("");
 
     onClose();
@@ -56,8 +59,22 @@ function AddTransactionModal({ isOpen, onClose }) {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
-          <option>Income</option>
-          <option>Expense</option>
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="Salary">Salary</option>
+          <option value="Food">Food</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Bills">Bills</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Other">Other</option>
         </select>
 
         <input

@@ -16,6 +16,35 @@ function RecentTransactions({ searchTerm, filterType }) {
     return matchesSearch && matchesFilter;
   });
 
+  const getCategoryIcon = (category) => {
+    switch (category) {
+      case "Salary":
+        return "💼";
+      case "Food":
+        return "🍔";
+      case "Shopping":
+        return "🛍️";
+      case "Transport":
+        return "🚗";
+      case "Entertainment":
+        return "🎬";
+      case "Bills":
+        return "💡";
+      case "Freelance":
+        return "💻";
+      default:
+        return "📌";
+    }
+  };
+
+  const formatDate = (date) => {
+    return new Date(date).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
   return (
     <div className="transactions-box">
       <h3>Recent Transactions</h3>
@@ -25,9 +54,20 @@ function RecentTransactions({ searchTerm, filterType }) {
       ) : (
         filteredTransactions.map((item) => (
           <div className="transaction-item" key={item.id}>
-            <div>
-              <h4>{item.title}</h4>
-              <p>{item.date}</p>
+            <div className="transaction-left">
+              <h4>
+                {getCategoryIcon(item.category)} {item.title}
+              </h4>
+
+              <p>
+                <span className="category-badge">
+                  {item.category}
+                </span>
+
+                {" • "}
+
+                {formatDate(item.date)}
+              </p>
             </div>
 
             <div className="transaction-right">

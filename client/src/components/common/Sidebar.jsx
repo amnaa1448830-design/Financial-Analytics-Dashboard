@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../styles/sidebar.css";
 
 function Sidebar() {
@@ -9,13 +10,29 @@ function Sidebar() {
 
       <nav className="menu">
         <ul>
-          <li>📊 Dashboard</li>
-          <li>💳 Transactions</li>
+
+          <li>
+            <NavLink to="/dashboard">
+              📊 Dashboard
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/transactions">
+              💳 Transactions
+            </NavLink>
+          </li>
+
           <li>📈 Analytics</li>
+
           <li>💰 Budget</li>
+
           <li>🎯 Goals</li>
+
           <li>📄 Reports</li>
+
           <li>⚙️ Settings</li>
+
         </ul>
       </nav>
     </aside>

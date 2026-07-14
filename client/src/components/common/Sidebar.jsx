@@ -12,26 +12,61 @@ function Sidebar() {
         <ul>
 
           <li>
-            <NavLink to="/dashboard">
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               📊 Dashboard
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/transactions">
+            <NavLink
+              to="/transactions"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               💳 Transactions
             </NavLink>
           </li>
 
-          <li>📈 Analytics</li>
+          <li>
+            <NavLink
+              to="/analytics"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
+              📈 Analytics
+            </NavLink>
+          </li>
 
-          <li>💰 Budget</li>
+          <li>
+            <NavLink to="#">
+              💰 Budget
+            </NavLink>
+          </li>
 
-          <li>🎯 Goals</li>
+          <li>
+            <NavLink to="#">
+              🎯 Goals
+            </NavLink>
+          </li>
 
-          <li>📄 Reports</li>
+          <li>
+            <NavLink to="#">
+              📄 Reports
+            </NavLink>
+          </li>
 
-          <li>⚙️ Settings</li>
+          <li>
+            <NavLink to="#">
+              ⚙️ Settings
+            </NavLink>
+          </li>
 
         </ul>
       </nav>

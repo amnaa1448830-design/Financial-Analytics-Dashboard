@@ -1,9 +1,10 @@
 .sidebar {
-  width: 250px;
+  width: 260px;
   min-height: 100vh;
-  background-color: #1e293b;
+  background: #0f172a;
   color: white;
   padding: 25px 20px;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo {
@@ -13,7 +14,9 @@
 
 .logo h2 {
   color: white;
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .menu ul {
@@ -22,13 +25,29 @@
 }
 
 .menu li {
-  padding: 14px 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-bottom: 12px;
 }
 
-.menu li:hover {
-  background-color: #334155;
+.menu li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  background: #1e40af;
+  color: white;
+  transform: translateX(5px);
+}
+
+.active-link {
+  background: #2563eb;
+  color: white !important;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
 }

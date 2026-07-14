@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
+import Analytics from "./pages/Analytics";
 
 function App() {
   return (
@@ -13,6 +14,11 @@ function App() {
       <Route
         path="/transactions"
         element={<Transactions />}
+      />
+
+      <Route
+        path="/analytics"
+        element={<Analytics />}
       />
     </Routes>
   );

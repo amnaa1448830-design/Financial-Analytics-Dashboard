@@ -56,7 +56,12 @@ function Sidebar() {
           </li>
 
           <li>
-            <NavLink to="#">
+            <NavLink
+              to="/goals"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               🎯 Goals
             </NavLink>
           </li>

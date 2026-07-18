@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import Analytics from "./pages/Analytics";
 import Budget from "./pages/Budget";
+import Goals from "./pages/Goals";
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
       <Route
         path="/budget"
         element={<Budget />}
+      />
+
+      <Route
+        path="/goals"
+        element={<Goals />}
       />
 
     </Routes>

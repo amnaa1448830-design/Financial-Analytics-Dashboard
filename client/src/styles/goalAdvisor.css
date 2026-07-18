@@ -1,0 +1,27 @@
+.advisor-card{
+    margin-top:40px;
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.advisor-card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.advisor-card p{
+    margin:12px 0;
+    font-size:16px;
+    color:#334155;
+}
+
+.advisor-tip{
+    margin-top:25px;
+    padding:18px;
+    border-left:5px solid #2563eb;
+    background:#eff6ff;
+    border-radius:10px;
+    line-height:1.7;
+}

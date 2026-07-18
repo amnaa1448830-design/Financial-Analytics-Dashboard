@@ -6,12 +6,15 @@ import App from "./App";
 import "./index.css";
 
 import TransactionProvider from "./context/TransactionContext";
+import GoalProvider from "./context/GoalContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <TransactionProvider>
-        <App />
+        <GoalProvider>
+          <App />
+        </GoalProvider>
       </TransactionProvider>
     </BrowserRouter>
   </StrictMode>

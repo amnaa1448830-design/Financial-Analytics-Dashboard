@@ -1,0 +1,18 @@
+.reports-page{
+    padding:30px;
+}
+
+.reports-header{
+    margin-bottom:35px;
+}
+
+.reports-header h1{
+    font-size:34px;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.reports-header p{
+    color:#64748b;
+    font-size:16px;
+}

@@ -4,6 +4,7 @@ import "../../styles/sidebar.css";
 function Sidebar() {
   return (
     <aside className="sidebar">
+
       <div className="logo">
         <h2>FinSight</h2>
       </div>
@@ -67,19 +68,30 @@ function Sidebar() {
           </li>
 
           <li>
-            <NavLink to="#">
+            <NavLink
+              to="/reports"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               📄 Reports
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="#">
+            <NavLink
+              to="/settings"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
               ⚙️ Settings
             </NavLink>
           </li>
 
         </ul>
       </nav>
+
     </aside>
   );
 }
